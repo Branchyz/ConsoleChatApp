@@ -63,10 +63,10 @@ namespace ConsoleChatApp
         }
 
         [MessageHandler((ushort)ClientToServerId.ChatMessage)]
-        public static void HandleChatMessage(Message message)
+        public static void HandleChatMessage(ushort id, Message message)
         {
             string chatMessage = message.GetString();
-            ushort id = message.GetUShort();
+            //ushort id = message.GetUShort();
             Console.WriteLine($"{Clients[id]}: {chatMessage}");
             
             Message messageToSendToClients = Message.Create(MessageSendMode.reliable, ServerToClientId.ChatMessage);
@@ -76,10 +76,10 @@ namespace ConsoleChatApp
         }
         
         [MessageHandler((ushort)ClientToServerId.Name)]
-        public static void HandleName(Message message)
+        public static void HandleName(ushort id, Message message)
         {
             string username = message.GetString();
-            ushort id = message.GetUShort();
+            //ushort id = message.GetUShort();
             
             Console.WriteLine($"{id} has joined the chat as {username}.");
             Clients.Add(id, username);
