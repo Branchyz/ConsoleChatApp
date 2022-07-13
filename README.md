@@ -1,3 +1,3 @@
 # ConsoleChatApp
 
-#### A small demo for RiptideNetworking from @tom-weiland
+#### A small demo for RiptideNetworking by Tom Weiland
