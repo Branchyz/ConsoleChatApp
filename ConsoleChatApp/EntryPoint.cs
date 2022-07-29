@@ -26,6 +26,7 @@ namespace ConsoleChatApp
             if(String.IsNullOrWhiteSpace(input))
             {
                 Console.WriteLine("Invalid input!");
+                recursion++;
                 Main();
                 return;
             }
@@ -45,6 +46,7 @@ namespace ConsoleChatApp
             else
             {
                 Console.WriteLine("Invalid input!");
+                recursion++;
                 Main();
             }
         }
